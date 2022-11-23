@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("创建数组")
+        var a=[1,1,4,5,1,4,"Genius","Sapi","Ez"]
+        document.write("<br>")
+        document.write(a)
+        document.write("<br><br>")
+        document.write("测量长度")
+        document.write("<br>")
+        document.write(a.length)
+        document.write("<br><br>")
+        document.write("延长数组")
+        document.write("<br>")
+        a.length=10
+        a[9]=false
+        document.write(a)
+        document.write("<br><br>")
+        document.write("缩短数组")
+        document.write("<br>")
+        a.length=9
+        document.write(a)
+        document.write("<br><br>")
+        document.write("遍历数组")
+        document.write("<br>")
+        for(var i=0;i<a.length;i++)
+        {
+            document.write(a[i])
+            document.write(" ")
+        }
+        document.write("<br><br>")
+        document.write("末尾添加<br>")
+        a.push("Sweden")
+        document.write(a+"<br>Length of a[]: "+a.length+"<br><br>")
+        document.write("末尾删除<br>")
+        a.pop()
+        document.write(a+"<br>Length of a[]: "+a.length+"<br><br>")
+        document.write("前面添加<br>")
+        a.unshift("Orz")
+        document.write(a+"<br>Length of a[]: "+a.length+"<br><br>")
+        document.write("前面删除<br>")
+        a.shift()
+        document.write(a+"<br>Length of a[]: "+a.length+"<br><br>")
+        document.write("中间删除<br>")
+        a.splice(5,2)
+        document.write(a+"<br>Length of a[]: "+a.length+"<br><br>")
+        document.write("中间插入<br>")
+        a.splice(1,0,"Apple","Windows")
+        document.write(a+"<br>Length of a[]: "+a.length+"<br><br>")
+        document.write("中间替换<br>")
+        a.splice(1,2,"Windows","Apple")
+        document.write(a+"<br>Length of a[]: "+a.length+"<br><br>")
+        document.write("中间反序<br>")
+        a.reverse()
+        document.write(a+"<br>Length of a[]: "+a.length+"<br><br>")
+        document.write("取新数列<br>")
+        a.length=0
+        a=[11,22,7,56,3]
+        document.write(a+"<br><br>")
+        document.write("按数位排序<br>")
+        a.sort()
+        document.write(a+"<br><br>")
+        document.write("按大小排序<br>")
+        a.sort(function(a,b){return a-b})
+        document.write(a+"<br>")
+        a.sort(function(a,b){return b-a})
+        document.write(a+"<br><br>")
+        document.write("数组拼接<br>")
+        a=[1,3,5,7,9]
+        b=[2,4,6,8,10]
+        c=a.concat(b)
+        document.write(a+"<br>"+b+"<br>"+c+"<br><br>")
+        document.write("中间选取（注意slice函数的不同之处）<br>")
+        a=["Alice","Bob","Cindy","David","Edwards"]
+        b=a.slice(2,4)
+        document.write(a+"<br>")
+        document.write(b+"<br><br>")
+        document.write("数组复制<br>")
+        document.write(a+"<br>")
+        b=a.concat()
+        document.write(b+"<br><br>")
+        document.write("转字符串<br>")
+        var d=a.join(" + ")
+        document.write(d+"<br><br>")
+        document.write("<b>可以按照html的语法进行输出</b><br>")
+        document.write("<ol style='color: brown'>")
+        for(var i=0;i<a.length;i++)
+        {
+            document.write("<li>"+a[i]+"</li>")
+        }
+        document.write("</ol>")
+        document.write("元素查询（从前到后）<br>")
+        document.write(a.indexOf("Cindy")+"<br><br>")
+        document.write("部分查询<br>")
+        document.write(a.indexOf("Cindy",2)+"<br>")
+        document.write(a.indexOf("Cindy",3,4)+"<br><br>")
+        document.write("元素查询（从后到前）<br>")
+        document.write(a.lastIndexOf("David")+"<br><br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
