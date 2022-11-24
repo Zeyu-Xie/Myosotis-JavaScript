@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var a=new Date()
+        document.write("当前时间")
+        document.write("<br>")
+        document.write(a+" "+typeof(a))
+        document.write("<br><br>")
+
+        a=new Date(1000)
+        document.write("指定时间1")
+        document.write("<br>")
+        document.write(a+" "+typeof(a))
+        document.write("<br><br>")
+
+        a=new Date(2022,10)
+        document.write("指定时间2")
+        document.write("<br>")
+        document.write(a+" "+typeof(a))
+        document.write("<br><br>")
+
+        a=new Date(2022,10,25)
+        document.write("指定时间3")
+        document.write("<br>")
+        document.write(a+" "+typeof(a))
+        document.write("<br><br>")
+
+        a=new Date("2022-11-25 0:0")
+        document.write("指定时间4")
+        document.write("<br>")
+        document.write(a+" "+typeof(a))
+        document.write("<br><br>")
+
+        a=new Date()
+        var b=a.getFullYear()
+        document.write("年份获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+
+        a=new Date()
+        b=a.getMonth()
+        document.write("月份获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+
+        a=new Date()
+        b=a.getDate()
+        document.write("日期获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+
+        a=new Date()
+        b=a.getHours()
+        document.write("小时获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+
+        a=new Date()
+        b=a.getMinutes()
+        document.write("分钟获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+
+        a=new Date()
+        b=a.getMilliseconds()
+        document.write("毫秒数获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+
+        a=new Date()
+        b=a.getSeconds()
+        document.write("秒数获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+        
+        a=new Date()
+        b=a.getUTCHours()
+        document.write("UTC小时获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+
+        a=new Date()
+        b=a.getTime()
+        document.write("时间戳获取")
+        document.write("<br>")
+        document.write(b+" "+typeof(b))
+        document.write("<br><br>")
+
+        a=new Date()
+        a.setFullYear(2025)
+        document.write("年份设置")
+        document.write("<br>")
+        document.write(a+" "+typeof(a))
+        document.write("<br><br>")
+
+        document.write("定时器")
+        var timeId=setTimeout(function(){console.log("5 sec have passed!")},5000)
+        document.write("<br>")
+        document.write("详见console")
+        document.write("<br><br>")
+
+        document.write("间隔定时器")
+        var timeId=setInterval(function(){console.log(new Date().getSeconds())},500)
+        document.write("<br>")
+        document.write("详见console")
+        document.write("<br><br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
