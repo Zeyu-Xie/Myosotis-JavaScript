@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        html, body {
+            height: 300%;
+            width: 100%;
+            color: white;
+        }
+        body {
+            background-image: url("photo3.jpeg");
+            background-repeat: repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            margin: 100px;
+            font-size: 20px;
+        }
+        #box4 {
+            position: fixed;
+            right: 100px;
+            bottom: 100px;
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            font-family: "Times New Roman";
+            font-size: 30px;
+        }
+        #box4 p {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+    <script>
+        //write this in the <head>
+        window.onload=function()
+        {
+            window.alert("This page has been fully loaded!")
+        }
+    </script>
+    <script>
+        var dis_top=0
+        window.onresize=function()
+        {
+            console.log("resize")
+        }
+        window.onscroll=function()
+        {
+            console.log("scroll")
+            dis_top=document.documentElement.scrollTop
+            console.log(dis_top)
+            if(dis_top<=400)
+              console.log("隐藏‘返回顶部’按钮")
+            else
+              console.log("显示‘返回顶部’按钮")
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write("浏览器尺寸")
+        document.write("<br>")
+        var var_1=setInterval(function(){console.log(window.innerHeight+" "+window.innerWidth)},250)
+        document.write("详见console")
+        document.write("<br><br>")
+    </script>
+    <script>
+        document.write("页面弹窗")
+        document.write("<br>")
+    </script>
+    <button id="box1">页面弹窗</button>
+    <script>
+        box1.onclick=function()
+        {
+            window.alert("Here comes a Genius!")
+        }
+        document.write("<br><br>")
+    </script>
+    <script>
+        document.write("获取地址栏")
+        document.write("<br>"+window.location.href+"<br><br>")
+    </script>
+    <script>
+        document.write("改变地址栏<br>")
+    </script>
+    <button id="box2">改变地址栏</button>
+    <script>
+        box2.onclick=function()
+        {
+            window.location.href="https://www.google.com"
+        }
+        document.write("<br><br>")
+    </script>
+    <script>
+        document.write("刷新页面<br>")
+    </script>
+    <button id="box3">刷新页面</button>
+    <script>
+        box3.onclick=function()
+        {
+            window.location.reload()
+        }
+        document.write("<br><br>")
+    </script>
+    <p>页面加载完毕事件<br>弹出提示框<br><br>页面尺寸变更<br>详见console<br><br>页面滚动判断<br>详见console<br><br>页面滚动距离<br>详见console<br><br>打开新标签页<br></p>
+    <div id="box4">
+        <p>UP</p>
+    </div>
+    <script>
+        box4.onclick=function()
+        {
+            window.scrollTo({top:0})
+        }
+    </script>
+    <button id="box5">新标签页</button>
+    <br>
+    <br>
+    <script>
+        box5.onclick=function()
+        {
+            window.open("https://www.google.com")
+        }
+    </script>
+    返回上个页面
+    <br>
+    <button id="box6">返回上个页面</button>
+    <script>
+        box6.onclick=function()
+        {
+            window.history.back()
+        }
+    </script>
+    <br><br>
+    去到下个页面
+    <br>
+    <button id="box7">去到下个页面</button>
+    <script>
+        box6.onclick=function()
+        {
+            window.history.forward()
+        }
+    </script>
+    <br><br>
+    去到下n个页面(n=3)
+    <br>
+    <button id="box7">去到下n个页面</button>
+    <script>
+        box7.onclick=function()
+        {
+            history.go(3)
+        }
+    </script>
+    <br><br>
+</body>
+</html>
