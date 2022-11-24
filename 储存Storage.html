@@ -85,7 +85,7 @@
     <button id="delete_3_">删除</button>
     <br><br>
     <button id="clear_">清空</button>
-
+    <br><br><br>
     <script>
         store_1_.onclick=function()
         {
@@ -114,6 +114,28 @@
         clear_.onclick=function()
         {
              sessionStorage.clear()
+        }
+    </script>
+
+    <h2>Password Imitator</h2>
+    <form action="">
+        Username: <input type="text" id="username">
+        <br>
+        Password: <input type="password" id="password">
+        <br>
+        <button type="submit" id="submit">Submit</button>
+        <button type="reset" id="reset">Reset</button>
+    </form>
+
+    <script>
+        submit.onclick=function()
+        {
+            localStorage.setItem("Username",username.value)
+            localStorage.setItem("Password",password.value)
+        }
+        reset.onclick=function()
+        {
+            localStorage.clear()
         }
     </script>
 
