@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        html, body {
+            height: 300%;
+            width: 100%;
+            color: white;
+        }
+        body {
+            background-image: url("photo3.jpeg");
+            background-repeat: repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            margin: 100px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>localStorage</h2>
+    姓名
+    <button id="store_1">储存</button>
+    <button id="delete_1">删除</button>
+    <br><br>
+    年龄
+    <button id="store_2">储存</button>
+    <button id="delete_2">删除</button>
+    <br><br>
+    职业
+    <button id="store_3">储存</button>
+    <button id="delete_3">删除</button>
+    <br><br>
+    <button id="clear">清空</button>
+    <br><br><br>
+    <script>
+        store_1.onclick=function()
+        {
+            localStorage.setItem("name","Alice")
+        }
+        delete_1.onclick=function()
+        {
+            localStorage.removeItem("name")
+        }
+        store_2.onclick=function()
+        {
+            localStorage.setItem("age","17")
+        }
+        delete_2.onclick=function()
+        {
+            localStorage.removeItem("age")
+        }
+        store_3.onclick=function()
+        {
+            localStorage.setItem("occupation","soilder")
+        }
+        delete_3.onclick=function()
+        {
+            localStorage.removeItem("occupation")
+        }
+        clear.onclick=function()
+        {
+            localStorage.clear()
+        }
+    </script>
+    <h2>sessionStorage</h2>
+    姓名
+    <button id="store_1_">储存</button>
+    <button id="delete_1_">删除</button>
+    <br><br>
+    年龄
+    <button id="store_2_">储存</button>
+    <button id="delete_2_">删除</button>
+    <br><br>
+    职业
+    <button id="store_3_">储存</button>
+    <button id="delete_3_">删除</button>
+    <br><br>
+    <button id="clear_">清空</button>
+
+    <script>
+        store_1_.onclick=function()
+        {
+             sessionStorage.setItem("name","Alice")
+        }
+        delete_1_.onclick=function()
+        {
+             sessionStorage.removeItem("name")
+        }
+        store_2_.onclick=function()
+        {
+             sessionStorage.setItem("age","17")
+        }
+        delete_2_.onclick=function()
+        {
+             sessionStorage.removeItem("age")
+        }
+        store_3_.onclick=function()
+        {
+             sessionStorage.setItem("occupation","soilder")
+        }
+        delete_3_.onclick=function()
+        {
+             sessionStorage.removeItem("occupation")
+        }
+        clear_.onclick=function()
+        {
+             sessionStorage.clear()
+        }
+    </script>
+
+</html>
