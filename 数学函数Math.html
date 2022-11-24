@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=123.4567
+
+        document.write("四舍五入<br>"+a+" "+typeof(a)+"<br>"+a.toFixed(2)+" "+typeof(a.toFixed(2))+"<br>"+parseFloat(a.toFixed(2))+" "+typeof(parseFloat(a.toFixed(2))))
+        document.write("<br><br>")
+
+        document.write("四舍五入取整<br>"+a+" "+typeof(a)+"<br>"+Math.round(a)+" "+typeof(Math.round(a)))
+        document.write("<br><br>")
+
+        document.write("上取整<br>"+a+" "+typeof(a)+"<br>"+Math.ceil(a)+" "+typeof(Math.ceil(a)))
+        document.write("<br><br>")
+
+        document.write("下取整<br>"+a+" "+typeof(a)+"<br>"+Math.floor(a)+" "+typeof(Math.floor(a)))
+        document.write("<br><br>")
+
+        document.write("随机数<br>")
+        for(var i=1;i<=10;i++)
+          document.write(Math.random()+"<br>")
+        document.write("<br>")
+
+        document.write("绝对值<br>"+a+" "+typeof(a)+"<br>"+Math.abs(a)+" "+typeof(Math.abs(a)))
+        document.write("<br><br>")
+
+        document.write("平方根<br>"+a+" "+typeof(a)+"<br>"+Math.sqrt(a)+" "+typeof(Math.sqrt(a)))
+        document.write("<br><br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
