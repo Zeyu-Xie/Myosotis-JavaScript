@@ -83,6 +83,21 @@
         var li_2=document.querySelectorAll("ul li.list_1")
         console.log(li_1+" "+typeof(li_1))
         console.log(li_2+" "+typeof(li_2)+" 共"+li_2.length+"项")
+        console.log(" ")
+    </script>
+
+    <h3>value</h3>
+    <select id="select">
+        <option value="1">Genius</option>
+        <option value="2">Sapi</option>
+        <option value="3">Es</option>
+    </select>
+    <script>
+        select.value="2"
+        var sel=select
+        for(var i=0;i<3;i++)
+          console.log((i+1)+" "+sel[i].innerHTML)
+        console.log(" ")
     </script>
 
 </body>
