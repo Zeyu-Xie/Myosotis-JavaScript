@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        html, body {
+            width: 100%;
+            height: 200%;
+        }
+        body {
+            margin: 100px;
+            background-image: url(photo2.jpeg);
+            background-position: center center;
+            background-attachment: fixed;
+            font-family: "Times New Roman";            
+            color: white;
+        }
+        #box1 {
+            text-align: center;
+        }
+        #box1 p {
+            font-size: 20px;
+        }
+        #box2 {
+            background-color: brown;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" style="width: 100px; height: 100px; background-color: brown;">
+        <p id="p1" style="border: white solid 2px;">Genius</p>
+    </div>
+    <script>
+        console.log("普通行内样式获取")
+        var style_1=box1.style
+        var style_2=box1.style.width
+        console.log(style_1+" "+typeof(style_1))
+        console.log(style_2+" "+typeof(style_2))
+        var style_3=p1.style
+        var style_4=p1.style.border
+        console.log(style_3+" "+typeof(style_3))
+        console.log(style_4+" "+typeof(style_4))
+        console.log(" ")
+        console.log("有连字符的行内样式获取")
+        var style_5=box1.style["background-color"]
+        var style_6=box1.style.backgroundColor
+        console.log(style_5+" "+typeof(style_5))
+        console.log(style_6+" "+typeof(style_6))
+        console.log(" ")
+        console.log("行内样式+内部样式获取（只读）")
+        var style_7=getComputedStyle(box1)
+        var style_8=getComputedStyle(p1)
+        var style_9=style_8.textAlign
+        var style_10=style_8.border
+        var style_11=style_8["background-color"]
+        var style_12=style_8.backgroundColor
+        console.log(style_7+" "+typeof(style_7))
+        console.log(style_8+" "+typeof(style_8))
+        console.log(style_9+" "+typeof(style_9))
+        console.log(style_10+" "+typeof(style_10))
+        console.log(style_11+" "+typeof(style_11))
+        console.log(style_12+" "+typeof(style_12))
+    </script>
+</body>
+</html>
