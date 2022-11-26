@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>getElementsByName</h3>
+    <div name="occupation">driver</div>
+    <div name="occupation">teacher</div>
+    <div name="occupation">teacher</div>
+    <div name="occupation">lawyer</div>
+    <div name="occupation">teacher</div>
+    <div name="occupation">teacher</div>
+    <br>
+    <script>
+        var occupation=document.getElementsByName("occupation")
+        for(var i=0;i<occupation.length;i++)
+          console.log(occupation[i])
+        console.log(" ")
+    </script>
+
+    <h3>getElementsByName</h3>
+    <div class="box"><b>Here comes a Genius</b></div>
+    <div class="box"><b>Here comes a Genius</b></div>
+    <div class="box"><b>Here comes a Genius</b></div>
+    <br>
+    <script>
+        var box=document.getElementsByClassName("box")
+        for(var i=0;i<box.length;i++)
+          console.log(box[i])
+        console.log(" ")
+    </script>
+
+    <h3>getElementsByName</h3>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <br>
+    <script>
+        var p=document.getElementsByTagName("p")
+        for(var i=0;i<p.length;i++)
+          console.log(p[i])
+        console.log(" ")
+    </script>
+
+    <h3>innerHTML</h3>
+    <p>详见console</p>
+    <script>
+        for(var i=0;i<box.length;i++)
+          console.log(box[i].innerHTML+" "+typeof(box[i].innerHTML))
+    </script>
+
+    <h3>innerText</h3>
+    <p>详见console</p>
+    <script>
+        for(var i=0;i<box.length;i++)
+          console.log(box[i].innerText+" "+typeof(box[i].innerText))
+        console.log(" ")
+    </script>
+
+    <h3>querySelector和querySelectorAll</h3>
+    <ul>
+        <li class="list_1">Hello No.1</li>
+        <li class="list">Hello No.2</li>
+        <li class="list_1">Hello No.3</li>
+    </ul>
+    <ul>
+        <li class="list_1">Hello No.1</li>
+        <li class="list_1">Hello No.2</li>
+        <li class="list">Hello No.3</li>
+    </ul>
+    <ul>
+        <li class="list">Hello No.1</li>
+        <li class="list_1">Hello No.2</li>
+        <li class="list">Hello No.3</li>
+    </ul>
+    <script>
+        var li_1=document.querySelector("ul li")
+        var li_2=document.querySelectorAll("ul li.list_1")
+        console.log(li_1+" "+typeof(li_1))
+        console.log(li_2+" "+typeof(li_2)+" 共"+li_2.length+"项")
+    </script>
+
+</body>
+</html>
