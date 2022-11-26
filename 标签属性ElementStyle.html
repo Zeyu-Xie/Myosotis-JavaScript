@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>标签自带属性</legend>
+            Username: <input type="text" id="username">
+            <br>
+            Password: <input type="password" id="password">
+            <br>
+            <br>
+            <img src="photo3.jpeg" width=240px height=96px id="img_1">
+            <br>
+            <button id="button_1" type="button">Change Photo</button>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>自定义属性</legend>
+            <p id="p_1">This is a sentance</p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>案例——密码可视化</legend>
+            Username: <input type="text">
+            <br>
+            Password: <input type="password" id="password_2">
+            <br>
+            <button type="button" id="button_2">显示密码</button>
+        </fieldset>
+        <br>
+    </form>
+
+    <script>
+        console.log(username.type)
+        console.log(password.type)
+        var cli=0
+        button_1.onclick=function(){
+            if(Math.floor(cli/2)*2<cli)
+              img_1.src="photo3.jpeg"
+            else img_1.src="photo2.jpeg"
+            cli++
+        }
+        console.log(" ")
+    </script>
+
+    <script>
+        p_1.setAttribute("s_a","a_1")
+        console.log(p_1.getAttribute("s_a"))
+        p_1.removeAttribute("s_a","a_1")
+        console.log(p_1.getAttribute("s_a"))
+        p_1.dataset.diy_name="Genius"
+        console.log(p_1.dataset.DIY_name)
+        console.log(p_1)
+    </script>
+
+    <script>
+        button_2.onclick=function()
+        {
+            if(password_2.type=="password")
+            {
+                password_2.type="text"
+                button_2.innerHTML="隐藏密码"
+            }
+            else
+            {
+                password_2.type="password"
+                button_2.innerHTML="显示密码"
+            }
+        }
+    </script>
+</body>
+</html>
