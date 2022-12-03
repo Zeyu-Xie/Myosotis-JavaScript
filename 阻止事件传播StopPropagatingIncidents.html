@@ -12,7 +12,10 @@
 
 </head>
 <body>
-    <h1>Stop Propagating the Incident</h1>
+    <h1>Stop  the Incident</h1>
+    
+    <h3>The first way: </h3>
+
     <div id="box1">
         <ul>
             <li id="l1">
@@ -29,6 +32,8 @@
             </li>
         </ul>
     </div>
+
+    
 
     <script>
         delete1.onclick=function(evt)
@@ -47,6 +52,49 @@
             evt.stopPropagation()
         }
         box1.onclick=function()
+        {
+            location.href="https://www.google.com"
+        }
+    </script>
+
+    <h3>The second way: </h3>
+    
+    <div id="box2">
+        <ul>
+            <li id="l4">
+                The first website.
+                <button id="delete4">Delete</button>
+            </li>
+            <li id="l5">
+                The second website.
+                <button id="delete5">Delete</button>
+            </li>
+            <li id="l6">
+                The third website.
+                <button id="delete6">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    
+
+    <script>
+        delete4.onclick=function(evt)
+        {
+            l4.style.display="none"
+            evt.cancelBubble=true
+        }
+        delete5.onclick=function(evt)
+        {
+            l5.style.display="none"
+            evt.cancelBubble=true
+        }
+        delete6.onclick=function(evt)
+        {
+            l6.style.display="none"
+            evt.cancelBubble=true
+        }
+        box2.onclick=function()
         {
             location.href="https://www.google.com"
         }
