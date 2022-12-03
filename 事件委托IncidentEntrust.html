@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Incident Entrust</h1>
+    <ul id="list1">
+        <li>
+            First
+            <button>Delete</button>
+        </li>
+        <li>
+            Second
+            <button>Delete</button>
+        </li>
+        <li>
+            Third
+            <button>Delete</button>
+        </li>
+    </ul>
+
+    <script>
+        list1.onclick=function(evt) {
+            console.log(evt.target)
+            if(evt.target.nodeName=="BUTTON")
+              evt.target.parentNode.style.display="none"
+        }
+    </script>
+
+</body>
+</html>
