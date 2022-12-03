@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+
+    <style>
+        #Line2 {
+            position: relative;
+        }
+        #Line2>div {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+        }    
+    </style>
+
+</head>
+<body>
+    <h1>All incidents</h1>
+
+    <div id="Line1">
+        <button id="Browser">Browser Incidents</button>
+        <button id="Mouse">Mouse Incidents</button>
+        <button id="Keyboard0">Keyboard Incidents</button>
+        <button id="Form">Form Incidents</button>
+        <button id="Touching">Touching Incidents</button>
+    </div>
+
+    <br><br>
+
+    <div id="Line2">
+        <div id="BrowserButton">
+            <button id="load">load</button>
+            <button id="scroll1">scroll</button>
+        </div>
+        <div id="MouseButton">
+            <button id="click">click</button>
+            <button id="dblclick">dblclick</button>
+            <button id="contextmenu">contextmenu</button>
+            <button id="mousedown">mousedown</button>
+            <button id="mouseup">mouseup</button>
+            <button id="mousemove">mousemove</button>
+            <button id="mouseout">mouseout</button>
+            <button id="mouseenter">mouseenter</button>
+            <button id="mouseleave">mouseleave</button>
+        </div>
+        <div id="KeyboardButton">
+            <button id="keyup">keyup</button>
+            <button id="keydown">keydown</button>
+            <button id="keypress">keypress</button>
+        </div>
+        <div id="FormButton">
+            <button id="change">change</button>
+            <button id="input">input</button>
+            <button id="submit">submit</button>
+        </div>
+        <div id="TouchingButton">
+            <button id="touchstart">touchstart</button>
+            <button id="touchend">touchend</button>
+            <button id="touchmove">touchmove</button>
+        </div>
+    </div>
+
+    <div id="alls" style="height: 0px; width: 0px; visibility: hidden;">
+        <div id="t001">
+            <p>加载成功后显示弹窗</p>
+        </div>
+        <div id="t002">
+            <p>网页滑动式时显示弹窗</p>
+        </div>
+        <div id="t003">
+            <button id="t003a">单击显示弹窗</button>
+        </div>
+        <div id="t004">
+            <button id="t004a">双击显示弹窗</button>
+        </div>
+        <div id="t005">
+            <button id="t005a">右击显示弹窗</button>
+        </div>
+        <div id="t006">
+            <button id="t006a">左键按下显示弹窗</button>
+        </div>
+        <div id="t007">
+            <button id="t007a">左键松开显示弹窗</button>
+        </div>
+        <div id="t008">
+            <div id="t008a" width="100px" height="100px" style="background-color: brown;">
+                <p style="color: white;">鼠标移入显示弹窗</p>
+            </div>
+        </div>
+        <div id="t009">
+            <div id="t009a" width="100px" height="100px" style="background-color: brown;">
+                <p style="color: white;">鼠标移出显示弹窗</p>
+            </div>
+        </div>
+        <div id="t010">
+            <p>较为复杂，略</p>
+        </div>
+        <div id="t011">
+            <p>较为复杂，略</p>
+        </div>
+        <div id="t012">
+            <p>键盘按键抬起显示弹窗</p>
+        </div>
+        <div id="t013">
+            <p>键盘按键按下显示弹窗</p>
+        </div>
+        <div id="t014">
+            <p>按一下键盘显示弹窗</p>
+        </div>
+        <div id="t015">
+            <form id="t015a">
+                Enter anything here:
+                <input type="text" value="改变内容显示弹窗">
+            </form>
+        </div>
+        <div id="t016">
+            <form id="t016a">
+                Enter anything here:
+                <input type="text" value="输入内容显示弹窗">
+            </form>
+        </div>
+        <div id="t017">
+            <form id="t017a">
+                Enter anything here:
+                <input type="text" value="提交表单显示弹窗">
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="t018">
+            <p>较为复杂，略</p>
+        </div>        
+        <div id="t019">
+            <p>较为复杂，略</p>
+        </div>
+        <div id="t020">
+            <p>较为复杂，略</p>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div id="displaying">
+
+    </div>
+
+    <script src="js-2.js">
+
+    </script>
+
+    <script>
+        var s1, s2
+
+        function f2()
+        {
+            BrowserButton.style.visibility="hidden"
+            MouseButton.style.visibility="hidden"
+            KeyboardButton.style.visibility="hidden"
+            FormButton.style.visibility="hidden"
+            TouchingButton.style.visibility="hidden"
+
+            if(s1=="Browser")
+              BrowserButton.style.visibility="visible"
+            else if(s1=="Mouse")
+              MouseButton.style.visibility="visible"
+            else if(s1=="Keyboard0")
+              KeyboardButton.style.visibility="visible"
+            else if(s1=="Form")
+              FormButton.style.visibility="visible"
+            else if(s1=="Touching")
+              TouchingButton.style.visibility="visible"
+        }
+
+        Browser.onclick=function() {
+            s1="Browser"
+            f2()
+        }
+
+        Mouse.onclick=function() {
+            s1="Mouse"
+            f2()
+        }
+        Keyboard0.onclick=function() {
+            s1="Keyboard0"
+            f2()
+        }
+        Form.onclick=function() {
+            s1="Form"
+            f2()
+        }
+        Touching.onclick=function() {
+            s1="Touching"
+            f2()
+        }
+
+    </script>
+
+</body>
+</html>
