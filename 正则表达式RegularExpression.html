@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+    <h3>下方输入框必须保证内含“abc”</h3>
+    <br>
+    <input type="text" id="MyInput">
+     
+    <script>
+        var reg=/abc/
+        //var reg=new RegExp("abc") 也可
+
+        MyInput.onblur=function() {
+            console.log(reg.test(MyInput.value))
+        }
+
+    </script>
+
+</body>
+</html>
