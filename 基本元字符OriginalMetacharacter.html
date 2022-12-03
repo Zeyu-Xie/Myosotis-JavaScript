@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+    <h1>基本元字符</h1>
+
+    <h3>包含两位数字</h3>
+    <p>
+        abc
+        <br>
+        123
+        <br>
+        1a1
+    </p>
+    <script>
+        var reg=/\d\d/
+        console.log(reg.test("abc"))
+        console.log(reg.test("123"))
+        console.log(reg.test("1a1"))
+        console.log(" ")
+    </script>
+    <br>
+
+    <h3>包含两位非数字</h3>
+    <p>
+        abc
+        <br>
+        123
+        <br>
+        a1a
+    </p>
+    <script>
+        var reg=/\D\D/
+        console.log(reg.test("abc"))
+        console.log(reg.test("123"))
+        console.log(reg.test("a1a"))
+        console.log(" ")
+    </script>
+    <br>
+
+    <h3>包含一位空白（空格、缩进、换行）</h3>
+    <p>
+        a b
+        <br>
+        123
+        <br>
+        a1a
+    </p>
+    <script>
+        var reg=/\s/
+        console.log(reg.test("a b"))
+        console.log(reg.test("123"))
+        console.log(reg.test("a1a"))
+        console.log(" ")
+    </script>
+    <br>
+
+    <h3>包含一位非空白</h3>
+    <p>
+        abc
+        <br>
+        123
+        <br>
+        a1a
+    </p>
+    <script>
+        var reg=/\S/
+        console.log(reg.test("abc"))
+        console.log(reg.test("123"))
+        console.log(reg.test("a1a"))
+        console.log(" ")
+    </script>
+    <br>
+
+    <h3>包含两位字母/数字/下划线</h3>
+    <p>
+        abc
+        <br>
+        123
+        <br>
+        a1a
+        <br>
+        a_a
+        <br>
+        1
+        <br>
+        1-1
+    </p>
+    <script>
+        var reg=/\w\w/
+        console.log(reg.test("abc"))
+        console.log(reg.test("123"))
+        console.log(reg.test("a1a"))
+        console.log(reg.test("a_a"))
+        console.log(reg.test("1"))
+        console.log(reg.test("1-1"))
+        console.log(" ")
+    </script>
+    <br>
+
+    <h3>包含两位非字母/数字/下划线</h3>
+    <p>
+        abc
+        <br>
+        123
+        <br>
+        a1a
+        <br>
+        --
+        <br>
+        &*(11)
+    </p>
+    <script>
+        var reg=/\W\W/
+        console.log(reg.test("abc"))
+        console.log(reg.test("123"))
+        console.log(reg.test("a1a"))
+        console.log(reg.test("--"))
+        console.log(reg.test("&*(11)"))
+        console.log(" ")
+    </script>
+    <br>
+
+    <h3>包含两位任意内容（换行除外）</h3>
+    <p>
+        abc
+        <br>
+        123
+        <br>
+        a1a
+        <br>
+        1
+    </p>
+    <script>
+        var reg=/../
+        console.log(reg.test("abc"))
+        console.log(reg.test("123"))
+        console.log(reg.test("a1a"))
+        console.log(reg.test("1"))
+        console.log(" ")
+    </script>
+    <br>
+
+    <h3>包含“.”</h3>
+    <p>
+        a.c
+        <br>
+        123
+        <br>
+        a1.
+    </p>
+    <script>
+        var reg=/\./
+        console.log(reg.test("a.c"))
+        console.log(reg.test("123"))
+        console.log(reg.test("a1."))
+        console.log(" ")
+    </script>
+    <br>
+
+</body>
+</html>
