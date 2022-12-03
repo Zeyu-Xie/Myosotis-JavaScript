@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <h1>Stop Propagating the Incident</h1>
+    <div id="box1">
+        <ul>
+            <li id="l1">
+                The first website.
+                <button id="delete1">Delete</button>
+            </li>
+            <li id="l2">
+                The second website.
+                <button id="delete2">Delete</button>
+            </li>
+            <li id="l3">
+                The third website.
+                <button id="delete3">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        delete1.onclick=function(evt)
+        {
+            l1.style.visibility="hidden"
+            evt.stopPropagation()
+        }
+        delete2.onclick=function(evt)
+        {
+            l2.style.visibility="hidden"
+            evt.stopPropagation()
+        }
+        delete3.onclick=function(evt)
+        {
+            l3.style.visibility="hidden"
+            evt.stopPropagation()
+        }
+        box1.onclick=function()
+        {
+            location.href="https://www.google.com"
+        }
+    </script>
+
+</body>
+</html>
