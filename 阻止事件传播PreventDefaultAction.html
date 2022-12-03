@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+    <h3>How to prevent the default action?</h3>
+    <p>In dom0: return false</p>
+    <p>In dom2: evt.preventDefault()</p>
+    <script>
+        document.oncontextmenu=function() {
+            console.log("contextmenu-1")
+            return false
+        }
+        document.addEventListener("contextmenu",function(evt){
+            console.log("contextmenu-2")
+            evt.preventDefault()
+        })
+    </script>
+</body>
+</html>
