@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            width: 2000px;
+            height: 2000px;
+        }
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            overflow: hidden;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+        #box2 {
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2">
+
+        </div>
+    </div>
+
+    <script>
+        box1.onclick=function(evt) {
+            console.log("可视窗口距离")
+            console.log(evt.clientX+" "+evt.clientY)
+            console.log("页面距离")
+            console.log(evt.pageX+" "+evt.pageY)
+            console.log("元素距离")
+            console.log(evt.offsetX+" "+evt.offsetY)
+            console.log(" ")
+        }
+    </script>
+</body>
+</html>
