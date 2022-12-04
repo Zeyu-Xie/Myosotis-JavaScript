@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+    <h1>ES6基础语法</h1>
+    <div id="box1">
+        <h3>1. let and const</h3>
+        <script>
+            let a=3
+            let b=5
+            const c=7
+            console.log(a+b+c)
+            a=4
+            console.log(a+b+c)
+            console.log(" ")
+        </script>
+    </div>
+
+    <div id="box2">
+        <h3>2. array function</h3>
+        <script>
+            function add1(a,b) {
+                return a+b
+            }
+            var add2=(a,b) => {
+                return a+b
+            }
+            var add3=(a,b) => console.log(a+b)
+            console.log(add1(2,3))
+            console.log(add2(5,6))
+            add3(5,7)
+            console.log(" ")
+        </script>
+    </div>
+
+    <div>
+        <h3>3. deconstruct assignment</h3>
+        <script>
+            var arr1=[1,5,[3,7,[5]]]
+            var [a1,b1,[c1,d1,[e1]]]=arr1
+            console.log([a1,b1,c1,d1,e1])
+            var obj1= {
+                name: "Amy",
+                age: 20
+            }
+            var obj2= {
+                ...obj1,
+                place: {
+                    nationality: "Sweden",
+                    city: "Stockholm"
+                }
+            }
+            console.log(obj2)
+            var {name,age, place: {nationality,city}}=obj2
+            console.log(name+" "+age+" "+nationality+" "+city)
+            console.log(" ")
+        </script>
+    </div>
+
+    <div>
+        <h3>4. object easy-write</h3>
+        <script>
+            let name1="Biden"
+            let age1=20
+            let nationality1="USA"
+            var obj3= {
+                name1,
+                age1,
+                nationality1
+            }
+            console.log(obj3)
+            console.log(" ")
+        </script>
+    </div>
+
+    <div>
+        <h3>5. unfold operator</h3>
+        <script>
+            var a2=[1,4,33,7,6]
+            var b2=[...a2]
+            console.log(b2)
+            var f1=function() {
+                console.log(arguments)
+            }
+            f1(1,4,3,5,6)
+            var f2=(...arr2) => {
+                console.log([...arr2])
+            } 
+            f2(6,4,7,3,7,4,3,6,4,3)
+            var f3=(a3,b3,...arr3) => {
+                console.log(a3+" "+b3)
+                console.log([...arr3])
+            }
+            f3(1,2,8,8,8,8,6)
+        </script>
+    </div>
+
+</body>
+</html>
