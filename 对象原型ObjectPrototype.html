@@ -37,23 +37,24 @@
             this.ele=select
             this.title=content.title
             this.list=content.list
-            this.render=function() {
-                var h1=this.ele.querySelector("h1")
-                var ul=this.ele.querySelector("ul")
-                h1.innerHTML=this.title
-                ul.innerHTML=this.list.map(item => `<li>${item}</li>`).join("")
-            }
         }
 
-    var nod=document.getElementsByTagName("div")
-    var obj
+        CreateObj.prototype.render=function() {
+            var h1=this.ele.querySelector("h1")
+            var ul=this.ele.querySelector("ul")
+            h1.innerHTML=this.title
+            ul.innerHTML=this.list.map(item => `<li>${item}</li>`).join("")
+        }
 
-    for(let i=0;i<4;i++)
-    {
-        obj=new CreateObj(nod[i],data[i])
-        obj.render()
-    }
+        var nod=document.getElementsByTagName("div")
+        var obj
 
+        for(let i=0;i<4;i++)
+        {
+            obj=new CreateObj(nod[i],data[i])
+            obj.render()
+        }
+        
     </script>
 
 </body>
