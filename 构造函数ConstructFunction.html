@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+
+    <div id="box1">
+        <h1></h1>
+        <ul></ul>
+    </div>
+    <div id="box2">
+        <h1></h1>
+        <ul></ul>
+    </div>
+    
+    <script>
+        
+        var data=[{title: "Sports", list: ["Football","Basketball","baseball"]},{title: "Food", list: ["Rice","Noodles","Pizza"]}]
+
+        function CreateObj1(select,content) {
+            var nod1=new Object()
+            nod1.ele=document.getElementById(select)
+            nod1.title=content.title
+            nod1.list=content.list
+            return nod1
+        }
+
+        function CreateObj2(select,content) {
+            this.ele=document.getElementById(select)
+            this.title=content.title
+            this.list=content.list
+        }
+
+
+        obj1=CreateObj1("box1",data[0])
+        obj2=new CreateObj2("box2",data[1])
+
+        console.log(obj1)
+        console.log(obj2)
+
+        obj1.ele.querySelector("h1").innerText=obj1.title
+        obj1.ele.querySelector("ul").innerHTML=obj1.list.map(item => `<li>${item}</li>`).join("")
+
+        obj2.ele.querySelector("h1").innerText=obj2.title
+        obj2.ele.querySelector("ul").innerHTML=obj2.list.map(item => `<li>${item}</li>`).join("")
+
+    </script>
+
+</body>
+</html>
