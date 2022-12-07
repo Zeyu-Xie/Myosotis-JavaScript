@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+
+    <div id="box1">
+        <h1></h1>
+        <ul id="list1">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="box2">
+        <h1></h1>
+        <ul id="list2">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+
+        class CreateObj {
+            constructor(nod, title, list) {
+                this.nod=nod
+                this.title=title
+                this.list=list
+            }
+
+            render=function() {
+                var hn=this.nod.querySelector("h1")
+                var ln=this.nod.querySelectorAll("li")
+                let len=ln.length
+
+                hn.innerHTML=this.title
+                for(let i=0;i<len;i++)
+                {
+                    ln[i].innerHTML=this.list[i]
+                }
+            }
+        }
+
+        nod1=document.getElementById("box1")
+        nod2=document.getElementById("box2")
+
+        var obj1=new CreateObj(nod1,"Genius",["1","2","3"])
+        var obj2=new CreateObj(nod2,"Kervin",["4","5","6"])
+
+        obj1.render()
+        obj2.render()
+
+    </script>
+
+</body>
+</html>
