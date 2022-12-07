@@ -28,13 +28,10 @@
             console.log("Hej everyone! I'm "+this.name+" and I'm "+this.age+" years old.")
         }
         student.prototype.say=function() {
-            console.log("Hej everyone! I'm "+this.name+" and I'm "+this.age+" years old.")
-        }
-        student.prototype.say2=function() {
-            this.say()
+            person.prototype.say.call(this)
             console.log("And my grade is "+this.grade)
         }
-        a.say2()
+        a.say()
 
     </script>
 
