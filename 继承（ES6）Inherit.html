@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+    <script>
+
+        class person {
+            constructor(name,age) {
+                this.name=name
+                this.age=age
+            }
+            say() {
+                console.log("Hej everyone! I'm "+this.name+" and I'm "+this.age+" years old.")
+            }
+        }
+
+        class student extends person {
+            constructor(name,age,grade) {
+                super(name,age)
+                this.grade=grade
+            }
+            say() {
+                super.say()
+                console.log("And my grade is "+this.grade+". ")
+            }
+        }
+
+        var a=new student("Genius",20,4.0)
+        a.say()
+
+    </script>
+</body>
+</html>
