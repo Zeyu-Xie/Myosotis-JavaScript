@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+
+    <script>
+
+        console.log("Constructive Function Inherit")
+        function person(name,age) {
+            this.name=name
+            this.age=age
+        }
+        function student(name,age,grade) {
+            person.call(this,name,age)
+            this.grade=grade
+        }
+        var a=new student("Genius",20,4.0)
+        console.log(a)
+        console.log(" ")
+
+        console.log("Prototype Functions Inherit")
+        person.prototype.say=function() {
+            console.log("Hej everyone! I'm "+this.name+" and I'm "+this.age+" years old.")
+        }
+        student.prototype.say=function() {
+            console.log("Hej everyone! I'm "+this.name+" and I'm "+this.age+" years old.")
+        }
+        student.prototype.say2=function() {
+            this.say()
+            console.log("And my grade is "+this.grade)
+        }
+        a.say2()
+
+    </script>
+
+</body>
+</html>
