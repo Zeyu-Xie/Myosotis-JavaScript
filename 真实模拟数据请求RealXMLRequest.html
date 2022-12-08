@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+    <ul id="box1" style="list-style-type: none;"></ul>
+    <script>
+        var xhr=new XMLHttpRequest()
+
+        xhr.open("GET","http://localhost:5500/json-2.json")
+        xhr.send()
+
+        xhr.onload=function() {
+            if(xhr.status==200) {
+                var jsondata=JSON.parse(xhr.responseText)
+                render(jsondata)
+            }
+            else if(xhr.status==404)
+              location.href="404.html"
+        }
+
+        mylist=document.getElementById("box1")
+        function render(jsondata) {
+            console.log(jsondata.data.list)
+            var html=jsondata.data.list.map(item => `
+                <li>
+                    <h1>${item.name}</h1>
+                    <h3>${item.age}</h3>
+                </li>
+            `)
+            mylist.innerHTML=html.join("")
+        }
+
+    </script>
+</body>
+</html>
