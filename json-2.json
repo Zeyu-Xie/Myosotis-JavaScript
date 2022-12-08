@@ -1,0 +1,22 @@
+{
+    "data": {
+        "list": [
+            {
+                "name": "Genius",
+                "age": 20
+            },
+            {
+                "name": "Amy",
+                "age": 18
+            },
+            {
+                "name": "Peter",
+                "age": 113
+            },
+            {
+                "name": "John",
+                "age": 9
+            }
+        ]
+    }
+}
