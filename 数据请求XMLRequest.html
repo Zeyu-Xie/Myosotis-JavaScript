@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+    <script>
+        var xhr=new XMLHttpRequest()
+
+        //xhr.open表示访问数据请求（拨号）
+
+        xhr.open("GET","http://localhost:5500/json-1.json")
+
+        //xhr.send表示将数据发送给浏览器（发送）
+
+        xhr.send()
+
+        //类似于接收（短信）
+        //onreadystatechange事件指的是xhr状态码（取值为1、2、3、4）改变
+        //xhr.readystate指的是事件码
+        //reponseText指的是文件返回给浏览器的数据（通常200表示获取成功，404表示失败）
+
+        xhr.onreadystatechange=function() {
+            if(xhr.readyState==4 && xhr.status==200)
+              console.log(xhr.responseText)
+            else if(xhr.readyState==4 && xhr.status==404)
+              location.href="404.html"
+        }
+
+        //onload事件指的是xhr状态码变为4，也即xhr请求加载完成
+
+        /*
+        xhr.onload=function() {
+            if(xhr.status==200)
+              console.log(xhr.responseText)
+            else if(xhr.status==404)
+              location.href="404.html"
+        }
+        */
+    </script>
+</body>
+</html>
