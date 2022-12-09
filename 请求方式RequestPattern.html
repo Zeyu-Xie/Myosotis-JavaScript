@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+</head>
+<body>
+    
+    <button id="myget">myget</button>
+    <button id="mypost">mypost</button>
+    <button id="myput">myput</button>
+    <button id="mypatch">mypatch</button>
+    <button id="mydelete">mydelete</button>
+
+    <script>
+
+        myget.onclick=function() {
+            var xhr=new XMLHttpRequest()
+            xhr.open("GET","http://localhost:3000/users")
+            xhr.onload=function() {
+                if(xhr.status==200) {
+                    console.log(xhr.responseText)
+                }
+            }
+            xhr.send()
+        }
+
+        mypost.onclick=function() {
+            var xhr=new XMLHttpRequest()
+            xhr.open("POST","http://localhost:3000/users")
+            xhr.onload=function() {
+                if(xhr.status==201) {
+                    console.log(xhr.responseText)
+                }
+            }
+            //xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+            //xhr.send(`username=Bob&password=114514`)
+            xhr.setRequestHeader("Content-Type","application/json")
+            xhr.send(JSON.stringify({
+                username: "David",
+                password: "I_Love_Cindy",
+                id: 10
+            }))
+        }
+
+        myput.onclick=function() {
+            var xhr=new XMLHttpRequest()
+            xhr.open("PUT","http://localhost:3000/users/10")
+            xhr.onload=function() {
+                if(xhr.status==200) {
+                    console.log(xhr.responseText)
+                }
+            }
+            xhr.setRequestHeader("Content-Type","application/json")
+            xhr.send(JSON.stringify({
+                username: "David's Grandfather",
+                password: "I_Love_David",
+            }))            
+        }
+
+        mypatch.onclick=function() {
+            var xhr=new XMLHttpRequest()
+            xhr.open("PATCH","http://localhost:3000/users/10")
+            xhr.onload=function() {
+                if(xhr.status==200) {
+                    console.log(xhr.responseText)
+                }
+            }
+            xhr.setRequestHeader("Content-Type","application/json")
+            xhr.send(JSON.stringify({
+                email: "david@gmail.com"
+            }))            
+        }
+
+        mydelete.onclick=function() {
+            var xhr=new XMLHttpRequest()
+            xhr.open("DELETE","http://localhost:3000/users/10")
+            xhr.onload=function() {
+                if(xhr.status==200) {
+                    console.log(xhr.responseText)
+                }
+            }
+            xhr.send()            
+        }
+
+    </script>
+
+</body>
+</html>
