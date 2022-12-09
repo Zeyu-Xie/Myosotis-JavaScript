@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Genius",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "username": "Amy",
+      "password": "654321"
+    },
+    {
+      "id": 3
+    },
+    {
+      "username": "Bob",
+      "password": "114514",
+      "id": 4
+    },
+    {
+      "username": "Cindy",
+      "password": "I_Love_Bob",
+      "id": 5
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 6
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 7
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 8
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 9
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 11
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 12
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 13
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 14
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 15
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 16
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 17
+    },
+    {
+      "username": "David",
+      "password": "I_Love_Cindy",
+      "id": 10
+    }
+  ],
+  "lists": [
+    20,
+    18
+  ]
+}
