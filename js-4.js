@@ -7,44 +7,47 @@ function queryStringfy(obj) {
 function ajax(options) {
 
     let defaultoptions= {
-        url:"",
+        url:"http://localhost:3000/users",
         method:"GET",
         async:true,
-        data:{},
-        headers:{},
-        success: function() {},
-        error: function() {}
+        data: "",
+        headers:{
+            "content-type": "application/x-www-form-urlencoded"
+        },
+        success: function(res) {
+            console.log("Success",res)
+        },
+        error: function(err) {
+            console.log("Error",err)
+        }
     }
     let {url,method,async,data,headers,success,error}= {
         ...defaultoptions,
         ...options
     }
 
-    console.log(url,method,async,data,headers,success,error)
-
-    if(typeof(data)=="object" && headers["content-type"]?.indexOf("json")>-1) {
+    if(typeof(data)=="object" && headers["content-type"]?.indexOf("json") > -1) {
         data=JSON.stringify(data)
     }
     else {
         data=queryStringfy(data)
     }
-    console.log(data)
 
     xhr=new XMLHttpRequest()
 
-    if(/^get$/i.test(method) && data) {
-        xhr.open(method,url,async)
-        xhr.onload=function() {
-            if(!/^2\d{2}$/.test(xhr.status)) {
-                error(`Wrong Status Code: ${xhr.status}`)
-                return
-            }
-            try {
-                let result=JSON.parse(xhr.responseText)
-                success(result)
-            } catch(err) {
-                error("Request fails! Because the server didn't return a JSON string.")
-            }
+    if(/^get$/i.test(method)) url+="?"+data
+
+    xhr.open(method,url,async)
+    xhr.onload=function() {
+        if(!/^2\d{2}$/.test(xhr.status)) {
+            error(`Wrong Status Code: ${xhr.status}`)
+            return
+        }
+        try {
+            let result=JSON.parse(xhr.responseText)
+            success(result)
+        } catch(err) {
+            error("Request fails! Because the server didn't return a JSON string.")
         }
     }
 
