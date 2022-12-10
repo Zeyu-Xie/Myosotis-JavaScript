@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius' Official Website</title>
+
+    <style>
+        input {
+            font-size: 100px;
+        }
+        #result {
+            width: 300px;
+            height: 150px;
+            background-color: brown;
+            color: white;
+            font-size: 100px;
+            position: absolute;
+            left: 8px;
+            top: 300px;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="text" id="box1">
+    <br>
+    <br>
+    <input type="text" id="box2">
+    <div id="result">
+
+    </div>
+    <script>
+        var reg=new RegExp("")
+        var password=""
+
+        function render() {
+            var r=reg.test(password)
+            result.innerHTML=r
+        }
+
+        box1.onblur=function() {
+            reg=new RegExp(box1.value)
+            console.log(reg)
+            render()
+        }
+        box2.onblur=function() {
+            password=box2.value
+            console.log(password)
+            render()
+        }
+    </script>
+</body>
+</html>
