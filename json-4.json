@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "username": "Amy",
+      "password": "666666",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "username": "Amy",
+      "password": "654321"
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "username": "Genius",
+      "password": "123454321",
+      "id": 5
+    },
+    {
+      "username": "Genius",
+      "password": "123212321",
+      "id": 6
+    },
+    {
+      "username": "Genius",
+      "password": "43212345",
+      "id": 7
+    },
+    {
+      "username": "Genius",
+      "password": "88888888",
+      "id": 8
+    },
+    {
+      "username": "Genius",
+      "password": "66666666",
+      "id": 9
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "username": "Genius",
+      "password": "12345678",
+      "id": 11
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 12
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 13
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 15
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 16
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 17
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 18
+    },
+    {
+      "username": "Genius",
+      "password": "123456",
+      "id": 19
+    }
+  ]
+}
