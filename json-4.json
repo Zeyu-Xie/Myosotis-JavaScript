@@ -1,94 +1,39 @@
 {
   "users": [
     {
-      "username": "Amy",
-      "password": "666666",
+      "username": "Genius",
+      "password": "HereComesAGenius",
       "id": 1
     },
     {
-      "id": 2,
-      "username": "Amy",
-      "password": "654321"
+      "username": "XFR",
+      "password": "HereComesAGuapi",
+      "id": 2
     },
     {
-      "username": "Genius",
-      "password": "123456",
+      "username": "Amy",
+      "password": "ILoveGenius",
       "id": 3
     },
     {
-      "username": "Genius",
-      "password": "123456",
+      "username": "AnotherGenius",
+      "password": "WhoAmI",
       "id": 4
     },
     {
-      "username": "Genius",
-      "password": "123454321",
+      "username": "MYT",
+      "password": "HereComesAnotherGuapi",
       "id": 5
     },
     {
-      "username": "Genius",
-      "password": "123212321",
+      "username": "TY",
+      "password": "HereComesADer",
       "id": 6
     },
     {
-      "username": "Genius",
-      "password": "43212345",
+      "username": "XJP",
+      "password": "I'm the emperor of Empire China! Ha! I'm so powerful!",
       "id": 7
-    },
-    {
-      "username": "Genius",
-      "password": "88888888",
-      "id": 8
-    },
-    {
-      "username": "Genius",
-      "password": "66666666",
-      "id": 9
-    },
-    {
-      "username": "Genius",
-      "password": "123456",
-      "id": 10
-    },
-    {
-      "username": "Genius",
-      "password": "12345678",
-      "id": 11
-    },
-    {
-      "username": "Genius",
-      "password": "123456",
-      "id": 12
-    },
-    {
-      "username": "Genius",
-      "password": "123456",
-      "id": 13
-    },
-    {
-      "username": "Genius",
-      "password": "123456",
-      "id": 15
-    },
-    {
-      "username": "Genius",
-      "password": "123456",
-      "id": 16
-    },
-    {
-      "username": "Genius",
-      "password": "123456",
-      "id": 17
-    },
-    {
-      "username": "Genius",
-      "password": "123456",
-      "id": 18
-    },
-    {
-      "username": "Genius",
-      "password": "123456",
-      "id": 19
     }
   ]
 }
