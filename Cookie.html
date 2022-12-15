@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+
+    <button id="button1">Add Age</button>
+    <button id="button2">Delete Age</button>
+
+    <script>
+        //设置cookie
+        document.cookie="username=Emo"
+
+        button1.onclick=function() {
+            document.cookie="age=20"
+        }
+
+        //搜索cookie
+        var str=document.cookie
+        var arr=str.split("; ")
+        var arr_key=new Array()
+        var arr_value=new Array()
+
+        var getcookie=function(key) {
+            let subarr_key=new Array()
+            for(let i=0;i<arr.length;i++) {
+                subarr=arr[i].split("=")
+                arr_key[i]=subarr[0]
+                arr_value[i]=subarr[1]
+            }
+            return arr_value[arr_key.indexOf(key)]
+        }
+
+        //修改cookie：同设置cookie
+
+        //删除cookie
+
+        button2.onclick=function() {
+            var date=new Date()
+            date.setMinutes=(date.getMinutes()-1)
+            document.cookie=`age=20;expires=${date.toUTCString()}`
+        }
+
+    </script>
+</body>
+</html>
