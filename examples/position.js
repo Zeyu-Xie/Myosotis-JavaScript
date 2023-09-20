@@ -24,7 +24,7 @@ if ("geolocation" in navigator) {
                 console.error("未知错误");
                 break;
         }
-    });
+    })
 } else {
     console.error("The explorer doesn't support Geolocation");
 }
